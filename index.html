@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[Your Name]</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Alex+Brush&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+<!-- Decorative rose corners, sit on every page (see style.css .rose-corner) -->
+<div class="rose-corner tl">
+  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="60" cy="60" r="34" stroke="#e10600" stroke-width="1.5"/>
+    <circle cx="60" cy="60" r="22" stroke="#e10600" stroke-width="1.5"/>
+    <circle cx="60" cy="60" r="10" stroke="#e10600" stroke-width="1.5"/>
+    <path d="M60 94 C40 130, 20 150, -10 165" stroke="#e10600" stroke-width="1.5"/>
+    <path d="M40 140 C55 130, 70 130, 85 145" stroke="#e10600" stroke-width="1.5"/>
+  </svg>
+</div>
+<div class="rose-corner br">
+  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="60" cy="60" r="34" stroke="#e10600" stroke-width="1.5"/>
+    <circle cx="60" cy="60" r="22" stroke="#e10600" stroke-width="1.5"/>
+    <circle cx="60" cy="60" r="10" stroke="#e10600" stroke-width="1.5"/>
+    <path d="M60 94 C40 130, 20 150, -10 165" stroke="#e10600" stroke-width="1.5"/>
+    <path d="M40 140 C55 130, 70 130, 85 145" stroke="#e10600" stroke-width="1.5"/>
+  </svg>
+</div>
+
+<!-- Animated butterflies (homepage only) -->
+<div class="butterfly bfly-1">
+  <svg viewBox="0 0 40 40"><g class="wing left"><path d="M20 20 C6 6, 2 6, 2 18 C2 26, 12 24, 20 20Z" fill="#e10600"/></g><g class="wing right"><path d="M20 20 C34 6, 38 6, 38 18 C38 26, 28 24, 20 20Z" fill="#e10600"/></g><rect x="19" y="14" width="2" height="14" fill="#0a0a0a"/></svg>
+</div>
+<div class="butterfly bfly-2">
+  <svg viewBox="0 0 40 40"><g class="wing left"><path d="M20 20 C6 6, 2 6, 2 18 C2 26, 12 24, 20 20Z" fill="#f3ece7"/></g><g class="wing right"><path d="M20 20 C34 6, 38 6, 38 18 C38 26, 28 24, 20 20Z" fill="#f3ece7"/></g><rect x="19" y="14" width="2" height="14" fill="#0a0a0a"/></svg>
+</div>
+<div class="butterfly bfly-3">
+  <svg viewBox="0 0 40 40"><g class="wing left"><path d="M20 20 C6 6, 2 6, 2 18 C2 26, 12 24, 20 20Z" fill="#e10600"/></g><g class="wing right"><path d="M20 20 C34 6, 38 6, 38 18 C38 26, 28 24, 20 20Z" fill="#e10600"/></g><rect x="19" y="14" width="2" height="14" fill="#0a0a0a"/></svg>
+</div>
+
+<!-- ============ NAV — logo/home button + tabs, same on every page ============ -->
+<nav>
+  <a href="index.html" class="logo-home">[Your <span>Name</span>]</a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <div class="nav-toggle">☰</div>
+</nav>
+
+<!-- ============ HERO ============
+     EDIT ME: replace the src below with your real photo.
+     The image sits scaled up (zoomed in); as the user scrolls it
+     zooms OUT to its natural size while your cursive name fades in. -->
+<div class="hero-pin">
+  <div class="hero-frame">
+    <div class="hero-photo-wrap">
+      <img class="hero-photo" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1400&auto=format&fit=crop" alt="[Your Name]">
+      <div class="hero-photo-overlay"></div>
+    </div>
+    <div class="hero-name">
+      <p class="eyebrow" style="margin-bottom:18px;">Welcome To My World</p>
+      <h1 class="script">Your Name</h1>
+    </div>
+    <div class="hero-scrolldown"><span>Scroll</span><span class="line"></span></div>
+  </div>
+</div>
+
+<!-- ============ QUOTE ============
+     EDIT ME: your personal quote/brand statement + who it's attributed to (you). -->
+<section class="quote-section">
+  <div class="reveal">
+    <blockquote>&ldquo;Write one or two sentences here that capture your brand
+      and who you are as a person &mdash; the thing you want people to feel
+      the moment they land on your page.&rdquo;</blockquote>
+    <cite>&mdash; [Your Name]</cite>
+  </div>
+</section>
+
+<!-- ============ LINKS / SOCIALS ============
+     EDIT ME: point every link at your real pages/profiles.
+     All buttons use class="magnetic" for the hover-follow effect. -->
+<section id="contact">
+  <div class="section-head reveal" style="text-align:center; margin-bottom:10px;">
+    <p class="eyebrow">Find Me</p>
+    <h2 style="margin-top:10px;">Elsewhere</h2>
+  </div>
+  <div class="link-cluster reveal">
+    <a class="magnetic" href="about.html">About</a>
+    <a class="magnetic" href="portfolio.html">Portfolio</a>
+    <a class="magnetic" href="blog.html">Blog</a>
+    <a class="magnetic" href="portfolio.html#podcast">Podcast</a>
+    <a class="magnetic" href="mailto:you@example.com">Email</a>
+    <a class="magnetic" href="#">Instagram</a>
+    <a class="magnetic" href="#">TikTok</a>
+    <a class="magnetic" href="#">LinkedIn</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-bottom">
+    <span>© 2026 [Your Name]. All rights reserved.</span>
+    <span>Built by hand.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

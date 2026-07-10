@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engineering Post Title — [Your Name]</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Alex+Brush&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .post-content{ max-width:720px; margin:0 auto; padding-top:160px; }
+  .post-content img{ width:100%; margin:30px 0; border:1px solid var(--red-dark); }
+  .post-content p{ color:var(--grey); line-height:1.9; margin-bottom:22px; font-size:1.1rem; }
+  .post-content h2{ font-size:clamp(1.8rem,4vw,2.6rem); margin-bottom:16px; }
+  .back-link{ display:inline-block; margin-bottom:40px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo-home">[Your <span>Name</span>]</a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <div class="nav-toggle">☰</div>
+</nav>
+
+<section>
+  <div class="post-content">
+    <!-- EDIT ME: this whole block is one post. Duplicate this file
+         for each new post, rename it (e.g. blog-post-2.html), then
+         point that post's "link" in blog.html's array at the new filename. -->
+    <a href="engineering.html" class="magnetic back-link" style="padding:10px 22px; font-size:0.68rem;">← All Engineering Posts</a>
+    <p class="eyebrow">Jan 01, 2026 &middot; Category</p>
+    <h2 style="margin-top:14px;">Post Title Goes Here</h2>
+    <img src="" alt="Post cover image">
+    <p>First paragraph of the post goes here. Write naturally — this
+       template is just a shell.</p>
+    <p>Second paragraph continues the post.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-bottom">
+    <span>© 2026 [Your Name]. All rights reserved.</span>
+    <span>Built by hand.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
