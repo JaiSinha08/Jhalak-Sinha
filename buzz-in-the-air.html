@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Buzz in the Air — Jhalak Sinha</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Alex+Brush&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<style>
+  .buzz-section-head{ display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:20px; margin-bottom:40px; }
+  .buzz-section-head h3{ font-size:clamp(1.6rem,3.5vw,2.2rem); margin-top:8px; }
+  .buzz-block{ margin-bottom:110px; }
+  .buzz-block:last-of-type{ margin-bottom:60px; }
+</style>
+</head>
+<body>
+
+<div class="rose-corner tl"><svg viewBox="0 0 200 200"><circle cx="60" cy="60" r="34" stroke="#e10600" stroke-width="1.5" fill="none"/><path d="M60 94 C40 130, 20 150, -10 165" stroke="#e10600" stroke-width="1.5" fill="none"/></svg></div>
+<div class="rose-corner br"><svg viewBox="0 0 200 200"><circle cx="60" cy="60" r="34" stroke="#e10600" stroke-width="1.5" fill="none"/><path d="M60 94 C40 130, 20 150, -10 165" stroke="#e10600" stroke-width="1.5" fill="none"/></svg></div>
+
+<nav>
+  <a href="index.html" class="logo-home">Jhalak <span>Sinha</span></a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="buzz-in-the-air.html">The Buzz in the Air</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <div class="nav-toggle">☰</div>
+</nav>
+
+<section>
+  <div class="grid-head reveal">
+    <p class="eyebrow">Business &middot; Hub</p>
+    <h2>The Buzz in the Air</h2>
+    <p style="color:var(--grey); max-width:600px; margin-top:20px; line-height:1.8;">
+      Everything under The Buzz in the Air, in one place — new writing
+      from The Buzz, updates from the Mach 1.0 podcast, and what's new
+      at The Hangar.
+    </p>
+  </div>
+
+  <!-- ============ THE BUZZ (blog) ============ -->
+  <div class="buzz-block">
+    <div class="buzz-section-head reveal">
+      <div>
+        <p class="eyebrow">01 &middot; The Buzz</p>
+        <h3>Latest From The Blog</h3>
+      </div>
+      <a class="magnetic" href="blog.html" style="padding:12px 26px; font-size:0.68rem;">View All Posts →</a>
+    </div>
+    <div id="buzz-blog-grid" class="card-grid"></div>
+  </div>
+
+  <!-- ============ MACH 1.0 (podcast updates) ============ -->
+  <div class="buzz-block">
+    <div class="buzz-section-head reveal">
+      <div>
+        <p class="eyebrow">02 &middot; Mach 1.0</p>
+        <h3>Podcast Updates</h3>
+      </div>
+      <a class="magnetic" href="podcast.html" style="padding:12px 26px; font-size:0.68rem;">Visit Podcast →</a>
+    </div>
+    <div id="buzz-podcast-grid" class="card-grid"></div>
+  </div>
+
+  <!-- ============ THE HANGAR (shop updates) ============ -->
+  <div class="buzz-block">
+    <div class="buzz-section-head reveal">
+      <div>
+        <p class="eyebrow">03 &middot; The Hangar</p>
+        <h3>Shop Updates</h3>
+      </div>
+      <a class="magnetic" href="business.html" style="padding:12px 26px; font-size:0.68rem;">Visit The Hangar →</a>
+    </div>
+    <div id="buzz-hangar-grid" class="card-grid"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-bottom">
+    <span>© 2026 Jhalak Sinha. All rights reserved.</span>
+    <span>Built by hand.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  /* ============================================================
+     TO ADD AN UPDATE TO ANY OF THE THREE SECTIONS BELOW:
+     copy one object in the matching array, paste it above the
+     closing bracket, and edit the fields. Newest goes first.
+     "link" can point to a full post page, an episode link, or
+     the relevant full page (blog.html / podcast.html / business.html).
+     ============================================================ */
+
+  // Mirror your latest blogPosts entries here (or trim to fewer)
+  const buzzBlogPosts = [
+    {
+      date: "Jan 01, 2026",
+      tag: "The Buzz",
+      title: "Post title goes here",
+      summary: "One or two sentence teaser for the post.",
+      image: "",
+      link: "blog-post-template.html"
+    },
+    {
+      date: "Dec 15, 2025",
+      tag: "The Buzz",
+      title: "Post title goes here",
+      summary: "One or two sentence teaser for the post.",
+      image: "",
+      link: "blog-post-template.html"
+    }
+  ];
+
+  const machUpdates = [
+    {
+      date: "TBA",
+      tag: "Mach 1.0",
+      title: "First episode coming soon",
+      summary: "Release schedule is being finalized — check back for the drop date.",
+      image: "",
+      link: "podcast.html"
+    }
+  ];
+
+  const hangarUpdates = [
+    {
+      date: "Coming Soon",
+      tag: "The Hangar",
+      title: "Shop opening soon",
+      summary: "Purpose-driven merchandise from The Buzz in the Air is on the way.",
+      image: "",
+      link: "business.html"
+    }
+  ];
+
+  renderCards('buzz-blog-grid', buzzBlogPosts);
+  renderCards('buzz-podcast-grid', machUpdates);
+  renderCards('buzz-hangar-grid', hangarUpdates);
+</script>
+</body>
+</html>
